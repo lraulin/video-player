@@ -15,7 +15,12 @@ export const Video = ({ video, playNext }) => {
 
   return (
     <>
-      <YouTube videoId={video.youTubeId} onEnd={playNext} onReady={onReady} />
+      <YouTube
+        videoId={video.youTubeId}
+        onEnd={playNext}
+        onReady={onReady}
+        opts={opts}
+      />
     </>
   );
 };

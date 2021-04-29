@@ -1,16 +1,16 @@
 import React from "react";
 import { PlaylistItem } from "./PlaylistItem.js";
 
-export const Playlist = ({ videoIds, videos, setSelectedVideo }) => {
+export const Playlist = ({ videos, setSelectedVideo }) => {
   return (
     <>
       <h2>Playlist</h2>
       <ul>
-        {videoIds.map((id) => (
+        {videos.map((video) => (
           <li>
             <PlaylistItem
-              key={id}
-              video={videos[id]}
+              key={video.youTubeId}
+              video={video}
               setSelectedVideo={setSelectedVideo}
             />
           </li>
